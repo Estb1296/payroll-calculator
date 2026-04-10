@@ -10,10 +10,10 @@ public class Payroll {
         System.out.print("What is your pay rate? ");
         float payRate = input.nextFloat();
 
-        extracted(hoursWorked, payRate, name);
+        grossPay(hoursWorked, payRate, name);
     }
 
-    private static void extracted(float hoursWorked, float payRate, String name) {
+    private static void grossPay(float hoursWorked, float payRate, String name) {
         if(hoursWorked > 40){
            float totalPay = ((hoursWorked - 40)*(payRate * 1.5f)) + (40 * payRate);
            System.out.printf("%s, your gross pay with overtime is: %.2f" , name,totalPay);
